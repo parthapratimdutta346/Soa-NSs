@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color-scheme: dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070c1d;
+}
+::-webkit-scrollbar-thumb {
+  background: #233466;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b508f;
+}
+
+/* 3D Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(13, 21, 46, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(25, 38, 77, 0.5) 0%, rgba(12, 19, 41, 0.6) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(230, 57, 70, 0.4);
+  box-shadow: 0 18px 40px rgba(230, 57, 70, 0.15), 0 0 20px rgba(46, 91, 255, 0.2);
+}
+
+.glass-card-isometric {
+  transform: perspective(1000px) rotateX(4deg) rotateY(-2deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glass-card-isometric:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(230, 57, 70, 0.25);
+}
+
+/* Glowing Neon Elements */
+.glow-text-orange {
+  text-shadow: 0 0 16px rgba(243, 91, 4, 0.7), 0 0 32px rgba(243, 91, 4, 0.4);
+}
+
+.glow-text-red {
+  text-shadow: 0 0 16px rgba(230, 57, 70, 0.7), 0 0 32px rgba(230, 57, 70, 0.4);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 16px rgba(46, 91, 255, 0.7), 0 0 32px rgba(46, 91, 255, 0.4);
+}
+
+.glow-border-red {
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.4), inset 0 0 15px rgba(230, 57, 70, 0.2);
+}
+
+.glow-border-blue {
+  box-shadow: 0 0 20px rgba(46, 91, 255, 0.4), inset 0 0 15px rgba(46, 91, 255, 0.2);
+}
+
+/* Subtle Animated Background Grid */
+.bg-cyber-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
